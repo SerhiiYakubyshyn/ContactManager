@@ -1,0 +1,30 @@
+Менеджер контактів
+
+Створіть веб-програму .NET, яка дозволить користувачам завантажувати CSV із вказаним нижче полем, 
+зберігати дані у базі даних MS SQL та показувати збережені дані на сторінці.
+Поля CSV:
+Name [string]
+Date of birth [date]
+Married [bool]
+Phone [string]
+Salary [decimal] 
+Крім того, користувачі повинні мати можливість фільтрувати дані за будь-яким стовпцем,
+ а також сортувати за будь-яким полем на стороні клієнта (за допомогою JavaScript).
+Також таблиця повинна забезпечувати вбудоване редагування для будь-якого рядка з можливістю видалити запис із бази даних. 
+Перевірка даних була б плюсом.
+Примітка: не потрібно повністю реалізовувати завдання, не соромтеся зупинятись через 8 годин або раніше та передавати код своєму репозиторію GIT разом із файлом резервної копії БД та ділитися з нами.
+
+
+Contact Manager
+
+Create a .NET web application that will allow users to upload CSV with the field below, store data into MS SQL database, and show stored data on the page.
+CSV fields:
+Name [string]
+Date of birth [date]
+Married [bool]
+Phone [string]
+Salary [decimal] 
+Additionally users should be able to filter data by any column as well as sort by any field on the client side (with javascript).
+Also the table should provide inline editing for any row with a possibility to remove a record from the database. Data validation would be a plus.
+
+Note: it is not required to fully implement the task, feel free to stop after 8 hours or earlier and commit the code to your GIT repo along with DB backup file and share with us.
