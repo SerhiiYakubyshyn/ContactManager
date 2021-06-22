@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>BusinnesLogicLayer</id>
+    <version>1.0.0</version>
+    <authors>BusinnesLogicLayer</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework="net5.0">
+        <dependency id="DataLayer" version="1.0.0" exclude="Build,Analyzers" />
+        <dependency id="AutoMapper" version="10.1.1" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.AspNetCore.Http.Features" version="5.0.7" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\Admin\Desktop\ContactManager\BusinnesLogicLayer\bin\Debug\net5.0\BusinnesLogicLayer.dll" target="lib\net5.0\BusinnesLogicLayer.dll" />
+  </files>
+</package>
