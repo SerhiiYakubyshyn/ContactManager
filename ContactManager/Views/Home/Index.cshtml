@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    @model IEnumerable<ContactManager.Models.PeopleViewModel>
+    @{
+        ViewBag.Title = "All People";
+    }
+    <a asp-action="Create" asp-controller="Home" class="btn btn-primary"> Add People</a><br /><br />
+    <a asp-action="Upload" asp-controller="Home" class="btn btn-primary"> Upload People from CSV file</a><br /><br />
+    <table class="table" id="table-id">
+        <thead>
+            <tr>
+                <th data-type="text">Name </th>
+                <th data-type="date">Date of birth </th>
+                <th data-type="boolean">Married </th>
+                <th data-type="text">Phone </th>
+                <th data-type="decimal">Salary </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.DateOfBirth.ToShortDateString()</td>
+                    <td>@item.Married</td>
+                    <td>@item.Phone</td>
+                    <td>@item.Salary.ToString()</td>
+                    <td>
+                        <a asp-action="Details" asp-controller="Home" asp-route-id="@item.Id" class="btn btn-primary">Details</a>
+                        <a asp-action="Edit" asp-controller="Home" asp-route-id="@item.Id" class="btn btn-primary">Edit</a>
+                        <a asp-action="Delete" asp-controller="Home" asp-route-id="@item.Id" class="btn btn-primary">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>            
+</table>
+</div>

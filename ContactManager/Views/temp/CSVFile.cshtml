@@ -1,0 +1,60 @@
+﻿@model IEnumerable<ContactManager.Models.PeopleViewModel>
+@{
+    ViewData["Title"] = "People from CSV file";
+}
+
+<td class="text-center">
+
+    @{
+        ViewBag.Title = "People from CSV file";
+    }
+
+    <form asp-action="CSVFile" method="post">
+
+        <table class="table">
+            <tr>
+                <td>Name </td>
+                <td>Date of birth </td>
+                <td>Married </td>
+                <td>Phone </td>
+                <td>Salary </td>
+            </tr>
+            <tr class="form-group">
+                @foreach (var item in Model)
+                {
+
+            <tr>
+
+                <td class="form-group">
+                    <input type="text" asp-for="@item.Name" value="@item.Name" class="form-control" disabled="disabled" />
+                </td>
+                <td class="form-group">
+                    <input type="text" value="@item.DateOfBirth.ToShortDateString()" asp-for="@item.DateOfBirth" class="form-control" disabled="disabled" />
+                </td>
+                <td class="form-group">
+                    <input type="text" value="@item.Married" asp-for="@item.Married"  class="form-control" disabled="disabled" />
+                </td>
+                <td class="form-group">
+                    <input type="text" value="@item.Phone" asp-for="@item.Phone" class="form-control" disabled="disabled" />
+                </td>
+                <td class="form-group">
+                    <input asp-for="@item.Salary" value="@item.Salary" class="form-control" disabled="disabled" />
+                </td>
+            </tr>
+
+            }
+
+            </table>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary"/>
+            </div>
+
+        </form>
+
+        <br />
+        <div>
+            <a asp-action="Upload" class="btn btn-primary">Back to List</a>
+        </div>
+
+
+    </td>
